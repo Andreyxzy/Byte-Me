@@ -288,13 +288,6 @@ main {
     font-family: 'Patrick Hand', cursive;
     font-size: 30px;
 }
-/* Styling for the local video */
-.catvid {
-    width: 90%;          /* Takes up 90% of the screen width on phones */
-    max-width: 700px;    /* Stops it from getting giant on your laptop */
-    height: auto;        /* Keeps the video shape correct */
-    border-radius: 10px;
-}
 
 /* Styling for the YouTube video */
 iframe {
@@ -339,8 +332,6 @@ iframe {
         align-items: center;
         padding: 20px 0;
         transition: 0.3s ease-in-out; /* Smooth slide animation */
-        
-        /* Optional: Add a border so it stands out from the content */
         border-top: 1px solid burlywood; 
         box-shadow: 0 10px 10px rgba(0,0,0,0.5);
     }
@@ -413,4 +404,5 @@ iframe {
     .contact-box {
         padding: 30px 20px;
     }
+
 }
