@@ -61,7 +61,7 @@
         <section class="abt" id="abt">
           <div class="about-container">
              <div class="about-image">
-               <img src="img/smilycat.jpg"Cute Cat Portrait">
+               <img src="img/smilycat.jpg">
              </div>
               <div class="about-content">
                   <h2 class="abtus">About Us</h2>
@@ -143,17 +143,18 @@
     const hamburger = document.getElementById('hamburger');
     const navmenu = document.getElementById('navmenu');
 
-    // 1. Toggle the menu when the hamburger is clicked
+    // Toggle the menu when the hamburger is clicked
     hamburger.addEventListener('click', () => {
         navmenu.classList.toggle('active');
-        hamburger.classList.toggle('active'); // Optional: Toggles animation on the button itself
+        hamburger.classList.toggle('active'); // Toggles animation on the button itself
     });
 
-    // 2. CLOSE the menu when a link is clicked
+    // CLOSE the menu when a link is clicked
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
         navmenu.classList.remove('active');
         hamburger.classList.remove('active');
     }));
     </script>
 </body>
+
 </html>
