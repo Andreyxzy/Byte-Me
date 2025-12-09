@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* header style */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: #1F2023;
+}
+header .navbar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navlogo .logotext {
+    font-family: Impact, sans-serif;
+    color: burlywood;
+    font-size: 40px;
+}
+.navbar .navmenu {
+    display: flex;
+    gap: 5px;
+}
+.navbar .navmenu .navitem {
+    padding: 10px 12px;
+    font-size: 30px;
+    font-family: "Trebuchet MS", sans-serif;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.navbar .navmenu .navitem:hover {
+    background-color: burlywood;
+}
+.nav-link {
+    color: #FFFFFF;
+}
+
+/* main style */
+main {
+    overflow-x: hidden;}
+.content {
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color: #F2F5F7;
+}
+.content .text {
+    display: flex;
+    padding: 70px 5%;
+    justify-content: space-between;
+
+}
+.content .details .tittle {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    color: #3B2F2F;
+    font-size: 60px;
+}
+.content .details .ty{
+    margin-top: 8px;
+    font-size: 24px;
+    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    max-width: 70%;
+
+}
+.content .details .tl {
+    max-width: 60%;
+    margin-top: 10px;
+}
+.content .img {
+    max-width: 40%;
+    margin-right: 30px;
+}
+@media (max-width: 900px) {
+    .content .text {
+        flex-direction: column;  
+        align-items: center;     
+        padding-top: 30px;      /* Adds space so the fixed header doesn't cover it */
+        gap: 2px;               
+    }
+
+    /* Un-squish the Text */
+    .content .details .ty, 
+    .content .details .tl {
+        max-width: 100%;         
+        text-align: center;      /* Centers the paragraph text */
+    }
+
+    /* 3. Center the Title */
+    .content .details .tittle {
+        text-align: center;
+        font-size: 40px;   
+    }
+
+    /*Cat Image */
+    .content .img {
+        max-width: 70%;          /* Prevents the cat from being too huge */
+        margin-right: 0;         /* Removes the right margin from desktop mode */
+        display: flex;           /* Helps with centering */
+        justify-content: center;
+    }
+}
+
+/* about section */
+.abt {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Container */
+.about-container {
+    display: flex;
+    background-color: #fff;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft shadow */
+    overflow: hidden; /* Ensures image corners stay rounded */
+}
+/*image side*/
+.about-image {
+    flex: 1; /* Takes up half the space */
+    min-height: 400px; /* Ensures it's tall enough */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zooms in to fill space without stretching */
+}
+
+/* Text Side */
+.about-content {
+    flex: 1; /* Takes up the other half */
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 5. Typography Styling */
+.abtus {
+    font-family: "Brush Script MT", cursive;
+    font-size: 50px;
+    color: #3B2F2F;
+    margin-bottom: 20px;
+}
+
+.about-content .text {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 6. The New List Styling */
+.about-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-list li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: burlywood;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column; /* Stack image on top, text on bottom */
+    }
+    
+    .about-image {
+        min-height: 250px; /* Shorter image on phone */
+    }
+
+    .about-content {
+        padding: 40px 20px;
+        text-align: center;
+    }
+}
+
+/* breed section*/
+.breed {
+    min-height: 100vh;
+}
+.breed h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 50px;
+}
+
+/* Grid Container*/
+.catbre {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;      
+    padding: 0 5%;  
+    padding-bottom: 50px;
+}
+
+/* Card (rag) */
+.rag {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* shadow */
+}
+
+/*  (rag img) */
+.rag img {
+    width: 100%;        /* Make image fill the width of the box */
+    height: 250px;      /* Force all images to be exactly this tall */
+
+    /*prevents stretching */
+    object-fit: cover;  
+    object-position: top; 
+    transition: transform 0.3s ease;
+
+}
+.rag img:hover {
+    transform: scale(1.05);
+}
+
+/* Caption Text */
+.rag figcaption {
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 900px) {
+    .breed h2{
+        padding-top:60px;
+    }
+    .catbre {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+}
+
+/*gallery section */
+.gallery {
+    min-height: 100vh;
+}
+.gallery .gal{
+    display: flex;
+    background-color: #FFFFFF;
+    padding: 50px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gallery .hu{
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+}
+.gallery .ho{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+}
+/* Styling for the local video */
+.catvid {
+    width: 90%;          /* Takes up 90% of the screen width on phones */
+    max-width: 700px;    /* Stops it from getting giant on your laptop */
+    height: auto;        /* Keeps the video shape correct */
+    border-radius: 10px;
+}
+
+/* Styling for the YouTube video */
+iframe {
+    width: 90%;           /* Match the width of the other video */
+    max-width: 700px;     /* Match the max-width */
+    aspect-ratio: 16 / 9; /* CRITICAL: This forces the iframe to be a rectangle */
+    border-radius: 10px;
+}
+
+/* toggle()hides on desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100; /* Ensures it sits on top */
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: burlywood;
+    margin: 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+    /* Show the button */
+    .hamburger {
+        display: flex; 
+    }
+
+    /* Style the menu to float underneath the header */
+    .navbar .navmenu {
+        position: absolute;  /* pulls the menu out of the header flow */
+        top: 100%;           /* Pushes it to the bottom edge of the header */
+        left: -100%;         /* Hides it off-screen to the left initially */
+        width: 100%;
+        background-color: #1F2023; /* Matches your header color */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transition: 0.3s ease-in-out; /* Smooth slide animation */
+        
+        /* Optional: Add a border so it stands out from the content */
+        border-top: 1px solid burlywood; 
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    }
+
+    /* The 'active' class slides the menu back onto the screen */
+    .navbar .navmenu.active {
+        left: 0;
+    }
+
+    .navbar .navitem {
+        margin: 10px 0;
+    }
+}
+
+/* contact */
+.contact{
+    min-height: 100vh;
+    background-color: #F2F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.con {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.title {
+    font-family: "Brush Script MT", cursive;
+    font-size: 50px;
+    color: #3B2F2F;
+    margin-bottom: 10px;
+}
+.question{
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    margin-bottom: 30px;
+}
+.con input,
+.con textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+.btn {
+    background-color: burlywood;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+.btn:hover {
+    background-color: #dcb386; /* Slightly darker on hover */
+    transform: scale(1.05);     /* Tiny grow effect */
+}
+@media (max-width: 600px) {
+    .contact-box {
+        padding: 30px 20px;
+    }
+}
